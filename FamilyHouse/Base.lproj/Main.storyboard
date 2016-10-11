@@ -1,8 +1,151 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YGR-i0-3Ax">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--📷-->
+        <scene sceneID="rvX-H2-EHq">
+            <objects>
+                <tableViewController id="Lx6-Zz-Ghs" customClass="FilmLocationTableViewController" customModule="FamilyHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="LVe-TP-nfB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filmCell" id="5Td-t8-Rab" customClass="FilmLocationTableViewCell" customModule="FamilyHouse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Td-t8-Rab" id="3wZ-UD-tAL">
+                                    <frame key="frameInset" width="375" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="161" translatesAutoresizingMaskIntoConstraints="NO" id="3p7-Ry-e7S">
+                                            <frame key="frameInset" minX="22" minY="17" width="349" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVK-jb-Ni8">
+                                                    <frame key="frameInset" width="67" height="34"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="LONGER VIEW  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stn-Pf-bio">
+                                                    <frame key="frameInset" minX="228" minY="7" width="121" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkh-WG-sax">
+                                            <frame key="frameInset" minX="22" minY="50" width="345" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="Qkh-WG-sax" id="Ud8-jH-Bmj"/>
+                                    <outlet property="nameLabel" destination="SVK-jb-Ni8" id="50U-Ks-JmT"/>
+                                    <outlet property="tvSeriesLabel" destination="stn-Pf-bio" id="ei6-Ao-fIQ"/>
+                                    <segue destination="lTC-xP-mGd" kind="show" identifier="characterSegue" id="ofN-V0-a7M"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Lx6-Zz-Ghs" id="JVQ-xY-N0g"/>
+                            <outlet property="delegate" destination="Lx6-Zz-Ghs" id="npU-P3-J9n"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="📷" id="wn7-tW-ufR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6Z-TB-99N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="160.56971514242881"/>
+        </scene>
+        <!--Characters-->
+        <scene sceneID="rSe-wR-vU3">
+            <objects>
+                <collectionViewController id="lTC-xP-mGd" customClass="CharacterCollectionViewController" customModule="FamilyHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="w7O-QY-eL8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8PD-b3-3X8">
+                            <size key="itemSize" width="150" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="characterCell" id="9IP-rr-bpe" customClass="CharacterCollectionViewCell" customModule="FamilyHouse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7vd-v9-ZrD">
+                                            <frame key="frameInset" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVh-Cv-uLR">
+                                            <frame key="frameInset" minY="121" width="150" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.47904979944229131" green="0.47904979944229131" blue="0.47904979944229131" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="characterImageView" destination="7vd-v9-ZrD" id="41N-YP-Ffy"/>
+                                    <outlet property="characterNameLabel" destination="CVh-Cv-uLR" id="b5X-FQ-rre"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="lTC-xP-mGd" id="LCh-vH-c3k"/>
+                            <outlet property="delegate" destination="lTC-xP-mGd" id="X5Z-CX-PS3"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Characters" id="7Gd-5U-rss">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="9Nc-Ha-B5u">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="lTC-xP-mGd" id="QrP-vu-NWt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDi-W1-e2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="161"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hp3-YU-X5J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YGR-i0-3Ax" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WB0-89-N18">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lx6-Zz-Ghs" kind="relationship" relationship="rootViewController" id="xU4-fE-5q1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yHa-7z-hKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152.80000000000001" y="161.46926536731635"/>
+        </scene>
+    </scenes>
 </document>
